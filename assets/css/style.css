@@ -1,0 +1,138 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-shadow: 1px 1px 2px #ddd;
+}
+
+/* Category Filter */
+select {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.image-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #007bff;
+}
+
+.image-card p {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    animation: zoomIn 0.3s;
+}
+
+#imageCaption {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+}
+
+#prevBtn {
+    left: 5%;
+}
+
+#nextBtn {
+    right: 5%;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.7); }
+    to { transform: scale(1); }
+}
